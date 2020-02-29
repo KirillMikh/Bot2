@@ -3,7 +3,11 @@ import telebot
 import schedule
 import time
 import random
-token = '934126024:AAEnzevbx9SUyhX8o5Waca9E4Oik1oO0R3M'
+import os
+
+token = os.environ.get('BOT_TOKEN')
+
+# token = '934126024:AAEnzevbx9SUyhX8o5Waca9E4Oik1oO0R3M'
 bot1 = telebot.TeleBot(token)
 user_set = set()
 
@@ -60,3 +64,4 @@ if __name__ == "__main__":
     t1.start()
     # starting thread 2
     t2.start()
+
