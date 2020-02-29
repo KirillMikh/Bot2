@@ -48,12 +48,11 @@ def get_text_messages(message):
 def runBot():
     bot1.polling()
 def runSchedulers():
-    schedule.every().day.at("21:45").do(job)
-
-    while True:
-        schedule.run_pending()
+      while True:
+        if datetime.datetime.now().hour==21 and datetime.datetime.now().minute==55:
+            job()
+            time.sleep(3600)
         time.sleep(1)
-
 
 if __name__ == "__main__":
     t1 = threading.Thread(target=runBot)
