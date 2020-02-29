@@ -3,6 +3,7 @@ import telebot
 import schedule
 import time
 import random
+token = '934126024:AAEnzevbx9SUyhX8o5Waca9E4Oik1oO0R3M'
 bot1 = telebot.TeleBot(token)
 user_set = set()
 
