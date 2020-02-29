@@ -5,7 +5,7 @@ import time
 import random
 import os
 
-token = os.environ.get('BOT_TOKEN')
+token = str(os.environ.get('BOT_TOKEN'))
 
 # token = '934126024:AAEnzevbx9SUyhX8o5Waca9E4Oik1oO0R3M'
 bot1 = telebot.TeleBot(token)
