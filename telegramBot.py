@@ -41,4 +41,22 @@ def get_text_messages(message):
     else:
         bot1.send_message(message.from_user.id, "Я тебя не понимаю. Но и не сильно то и хотелось))))(шуточка)")
 
-bot1.polling(none_stop=True)
+
+
+def runBot():
+    bot1.polling()
+def runSchedulers():
+    schedule.every().day.at("21:30").do(job)
+
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
+
+
+if __name__ == "__main__":
+    t1 = threading.Thread(target=runBot)
+    t2 = threading.Thread(target=runSchedulers)
+    # starting thread 1
+    t1.start()
+    # starting thread 2
+    t2.start()
