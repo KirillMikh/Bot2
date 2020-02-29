@@ -48,7 +48,7 @@ def get_text_messages(message):
 def runBot():
     bot1.polling()
 def runSchedulers():
-    schedule.every().day.at("21:30").do(job)
+    schedule.every().day.at("21:45").do(job)
 
     while True:
         schedule.run_pending()
