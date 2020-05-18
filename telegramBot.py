@@ -41,7 +41,7 @@ def get_text_messages(message):
     elif message.text == "Что ты можешь":
         bot1.send_message(message.from_user.id, "Я напоминаю тебе, что нужно каждый день ставить телефон на зарядку в 9 часов")
     else:
-        bot1.send_message(message.from_user.id, "Я тебя не понимаю. Но и не сильно то и хотелось)")
+        bot1.send_message(message.from_user.id, "Я тебя не понимаю. ")
 
 
 
