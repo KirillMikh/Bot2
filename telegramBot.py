@@ -27,7 +27,7 @@ def get_text_messages(message):
     if message.from_user.id not in user_set:
         user_set.add(message.from_user.id)
     if message.text == "Привет":
-        bot1.send_message(message.from_user.id, "И тебе привет), надеюсь у тебя все хорошо, солнышко")
+        bot1.send_message(message.from_user.id, "И тебе привет)")
         print(user_set)
 
     elif message.text == "/help":
